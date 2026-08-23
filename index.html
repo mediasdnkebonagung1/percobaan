@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SDN Kebonagung 1 Sukodono</title>
+<style>
+:root{
+  --primary:#0b6b3a; --secondary:#f2b705; --dark:#123524;
+  --light:#f5faf7; --white:#fff; --shadow:0 8px 24px rgba(0,0,0,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:#243128;line-height:1.65}
+a{text-decoration:none;color:inherit}
+.running{background:var(--dark);color:#fff;padding:9px 0;font-weight:700;overflow:hidden;white-space:nowrap}
+.running span{display:inline-block;padding-left:100%;animation:run 18s linear infinite}
+@keyframes run{to{transform:translateX(-100%)}}
+header{background:linear-gradient(135deg,#0b6b3a,#159447);color:#fff;padding:24px 6%;position:sticky;top:0;z-index:20;box-shadow:0 4px 14px rgba(0,0,0,.15)}
+.brand{display:flex;align-items:center;gap:16px}
+.logo{width:70px;height:70px;border-radius:50%;background:#fff;color:var(--primary);display:grid;place-items:center;font-weight:900;text-align:center;font-size:13px;border:4px solid var(--secondary)}
+.brand h1{font-size:clamp(20px,3vw,32px);line-height:1.2}
+.brand p{opacity:.9}
+nav{margin-top:18px;display:flex;gap:8px;flex-wrap:wrap}
+nav button{border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.12);color:#fff;padding:10px 13px;border-radius:10px;cursor:pointer;font-weight:700}
+nav button:hover,nav button.active{background:var(--secondary);color:#222}
+main{max-width:1200px;margin:auto;padding:30px 18px 60px}
+.page{display:none;animation:fade .35s ease}.page.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.hero{background:linear-gradient(135deg,#e5f6ec,#fff);border-left:7px solid var(--primary);padding:32px;border-radius:18px;box-shadow:var(--shadow);margin-bottom:24px}
+.hero h2{color:var(--primary);font-size:clamp(26px,4vw,42px);margin-bottom:8px}
+.hero strong{color:#8b6500}
+.section-title{color:var(--primary);margin:24px 0 14px;font-size:25px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.card{background:#fff;padding:22px;border-radius:16px;box-shadow:var(--shadow);border-top:4px solid var(--primary)}
+.stat{text-align:center}.stat .num{font-size:38px;font-weight:900;color:var(--primary)}.stat p{font-weight:700}
+.info{background:#fff;padding:25px;border-radius:16px;box-shadow:var(--shadow);margin-bottom:18px}
+.quote{font-size:18px;text-align:justify}
+.badge{display:inline-block;background:#e5f6ec;color:var(--primary);padding:5px 10px;border-radius:20px;font-weight:700;font-size:13px}
+.staff{display:flex;gap:15px;align-items:flex-start}
+.avatar{min-width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--primary);color:#fff;font-weight:900}
+.staff h3{font-size:17px}.staff p{color:#607064}
+.news-card h3{color:var(--primary);margin:8px 0}
+.extra{min-height:160px}
+.service a{display:inline-block;margin-top:12px;color:var(--primary);font-weight:800}
+.gallery{height:180px;background:linear-gradient(135deg,#dff2e7,#fff);display:grid;place-items:center;border-radius:14px;border:2px dashed #9ac9ae;font-weight:800;color:var(--primary)}
+footer{background:#102a1d;color:#dfeee5;text-align:center;padding:28px 18px}
+footer strong{color:#fff}
+.small{font-size:14px;color:#607064}
+.social-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:14px 0 8px}
+.social-links a{display:inline-flex;align-items:center;gap:8px;padding:10px 15px;border-radius:10px;background:#fff;color:#123524;font-weight:800;box-shadow:0 4px 12px rgba(0,0,0,.15);transition:.2s}
+.social-links a:hover{transform:translateY(-2px);background:#f2b705;color:#222}
+.social-note{font-size:12px;color:#b9d5c4;margin-top:6px}
+@media(max-width:700px){
+ header{padding:18px 4%}.brand{align-items:flex-start}.logo{width:58px;height:58px}
+ nav button{flex:1 1 44%;font-size:12px}
+ .hero{padding:22px}.quote{font-size:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="running"><span>SELAMAT DATANG DI WEBSITE RESMI SDN KEBONAGUNG 1 SUKODONO • PUSAT INFORMASI SEPUTAR SDN KEBONAGUNG 1 SUKODONO</span></div>
+
+<header>
+  <div class="brand">
+    <div class="logo">SDN<br>K1</div>
+    <div>
+      <h1>SD Negeri Kebonagung 1 Sukodono</h1>
+      <p>Berkarakter • Berprestasi • Berwawasan Lingkungan</p>
+    </div>
+  </div>
+  <nav id="nav"></nav>
+</header>
+
+<main>
+<section id="beranda" class="page active">
+  <div class="hero">
+    <span class="badge">WEBSITE RESMI SEKOLAH</span>
+    <h2>Selamat Datang di SDN Kebonagung 1 Sukodono</h2>
+    <p>Pusat informasi sekolah, layanan digital, berita, kegiatan, dan berbagai informasi pendidikan.</p>
+  </div>
+  <h2 class="section-title">Profil Singkat & Data Sekolah</h2>
+  <div class="grid">
+    <div class="card stat"><div class="num">16</div><p>Guru & Tenaga Pendidik</p></div>
+    <div class="card stat"><div class="num">3</div><p>Tenaga Kependidikan</p></div>
+    <div class="card stat"><div class="num">±300</div><p>Peserta Didik</p></div>
+    <div class="card stat"><div class="num">6</div><p>Rombel Utama</p></div>
+    <div class="card stat"><div class="num">✓</div><p>Sarana & Prasarana</p></div>
+    <div class="card stat"><div class="num">B</div><p>Akreditasi</p></div>
+  </div>
+  <h2 class="section-title">Sarana dan Prasarana</h2>
+  <div class="grid">
+    <div class="card">Ruang Kelas</div><div class="card">Perpustakaan</div><div class="card">Mushollah</div>
+    <div class="card">Ruang Guru</div><div class="card">Ruang Kepala Sekolah</div><div class="card">Lapangan Sekolah</div>
+    <div class="card">Toilet</div><div class="card">Ruang Administrasi</div>
+  </div>
+</section>
+
+<section id="kepegawaian" class="page">
+  <div class="hero"><h2>Kepegawaian</h2><p>Portal layanan digital untuk ASN dan GTK.</p></div>
+  <div class="grid" id="asn"></div>
+</section>
+
+<section id="profil" class="page">
+  <div class="hero"><h2>Profil Sekolah</h2><p>Mengenal lebih dekat SD Negeri Kebonagung 1 Sukodono.</p></div>
+  <div class="info"><h2 class="section-title">Sambutan Kepala Sekolah</h2>
+  <p class="quote">Assalamu’alaikum Warahmatullahi Wabarakatuh<br><br>
+  Salam sejahtera untuk kita semua. Selamat datang di Website Resmi SD Negeri Kebonagung 1 Sukodono. Puji syukur ke hadirat Allah SWT atas limpahan rahmat dan karunia-Nya sehingga Website Resmi SD Negeri Kebonagung 1 Sukodono dapat hadir sebagai media informasi, komunikasi, dan publikasi bagi seluruh warga sekolah serta masyarakat.<br><br>
+  Dengan penuh rasa syukur dan bangga, saya menyambut Bapak, Ibu, serta seluruh pengunjung website ini. Kehadiran website sekolah merupakan salah satu bentuk komitmen kami dalam memberikan pelayanan pendidikan yang terbuka, informatif, serta mengikuti perkembangan teknologi di era digital.<br><br>
+  SD Negeri Kebonagung 1 Sukodono memiliki visi untuk mewujudkan sekolah yang berkarakter, berprestasi, dan berwawasan lingkungan. Visi tersebut menjadi landasan dalam setiap langkah kami untuk membentuk peserta didik yang tidak hanya unggul dalam bidang akademik maupun nonakademik, tetapi juga memiliki akhlak mulia, disiplin, tanggung jawab, peduli terhadap sesama, serta mencintai dan menjaga kelestarian lingkungan.<br><br>
+  Melalui berbagai program pembelajaran, penguatan pendidikan karakter, pengembangan bakat dan minat, serta pembiasaan budaya peduli lingkungan, kami terus berupaya menciptakan suasana belajar yang aman, nyaman, menyenangkan, dan inspiratif. Kami percaya bahwa keberhasilan pendidikan merupakan hasil sinergi antara sekolah, orang tua, masyarakat, dan seluruh pemangku kepentingan.<br><br>
+  Website ini kami hadirkan sebagai jendela informasi yang memuat profil sekolah, visi dan misi, program unggulan, prestasi, kegiatan sekolah, serta berbagai informasi penting lainnya. Besar harapan kami, website ini dapat menjadi sarana komunikasi yang efektif sekaligus mempererat kerja sama antara sekolah dengan seluruh masyarakat.<br><br>
+  Kami mengucapkan terima kasih kepada seluruh guru, tenaga kependidikan, peserta didik, orang tua, komite sekolah, alumni, dan semua pihak yang telah memberikan dukungan dan kontribusi bagi kemajuan SD Negeri Kebonagung 1 Sukodono. Semoga kebersamaan dan kolaborasi yang terjalin senantiasa membawa sekolah ini menjadi lembaga pendidikan yang unggul, berkarakter, berprestasi, dan berwawasan lingkungan.<br><br>
+  Akhir kata, kami mengajak seluruh pengunjung untuk mengenal lebih dekat SD Negeri Kebonagung 1 Sukodono melalui website ini. Semoga informasi yang kami sajikan dapat memberikan manfaat serta menjadi inspirasi dalam mewujudkan pendidikan yang berkualitas bagi generasi penerus bangsa.<br><br>
+  Wassalamu’alaikum Warahmatullahi Wabarakatuh.</p>
+  <p><strong>Salam Hangat,<br>Mei Ernawati, S.Pd., M.Pd.<br>Kepala SD Negeri Kebonagung 1 Sukodono</strong></p></div>
+  <div class="grid">
+    <div class="info"><h2 class="section-title">Visi</h2><p><strong>“Terwujudnya generasi yang berkarakter, berprestasi dan berwawasan lingkungan.”</strong></p></div>
+    <div class="info"><h2 class="section-title">Misi</h2><p>✓ Mengaktualisasikan ajaran agama dengan konsekuen<br>✓ Mewujudkan pembelajaran berkualitas dan menyenangkan<br>✓ Mewujudkan sekolah adiwiyata yang berkearifan lokal<br>✓ Mewujudkan siswa berprestasi akademik dan non akademik</p></div>
+  </div>
+</section>
+
+<section id="tenaga" class="page">
+  <div class="hero"><h2>Tenaga Pendidik & Kependidikan</h2><p>Tim pendidik profesional yang berkomitmen untuk pendidikan berkualitas.</p></div>
+  <div class="grid" id="staff"></div>
+</section>
+
+<section id="berita" class="page">
+  <div class="hero"><h2>Kabar Berita</h2><p>Informasi dan dokumentasi kegiatan terbaru SDN Kebonagung 1 Sukodono.</p></div>
+  <div class="grid" id="news"></div>
+</section>
+
+<section id="ekstra" class="page">
+  <div class="hero"><h2>Ekstrakurikuler</h2><p>Pengembangan bakat, minat, karakter, dan prestasi peserta didik.</p></div>
+  <div class="grid" id="extras"></div>
+</section>
+
+<section id="galeri" class="page">
+  <div class="hero"><h2>Galeri</h2><p>Ruang dokumentasi kegiatan sekolah.</p></div>
+  <div class="grid" id="gallery"></div>
+</section>
+
+<section id="layanan" class="page">
+  <div class="hero"><h2>Layanan Informasi</h2><p>Informasi layanan administrasi dan dokumen sekolah.</p></div>
+  <div class="grid" id="services"></div>
+</section>
+</main>
+
+<footer>
+  <strong>SDN Kebonagung 1 Sukodono</strong><br>
+  Website Resmi Sekolah • Pusat Informasi dan Layanan Digital
+
+  <div class="social-links">
+    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">▶ YouTube Sekolah</a>
+    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">◎ Instagram Sekolah</a>
+    <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">♪ TikTok Sekolah</a>
+  </div>
+  <div class="social-note">Silakan ganti URL di atas dengan alamat akun resmi SDN Kebonagung 1 Sukodono.</div>
+  <span class="small">© 2026 SD Negeri Kebonagung 1 Sukodono</span>
+</footer>
+
+<script>
+const menus=[
+ ['beranda','Beranda'],['kepegawaian','Kepegawaian'],['profil','Profil Sekolah'],
+ ['tenaga','Tenaga Pendidik & Kependidikan'],['berita','Kabar Berita'],
+ ['ekstra','Ekstrakurikuler'],['galeri','Galeri'],['layanan','Layanan Informasi']
+];
+const nav=document.getElementById('nav');
+menus.forEach(([id,label],i)=>{
+ const b=document.createElement('button'); b.textContent=label; b.dataset.page=id;
+ b.onclick=()=>showPage(id); nav.appendChild(b);
+});
+function showPage(id){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+document.querySelector('nav button').classList.add('active');
+
+const asn=[
+ ['Portal Layanan ASN & GTK','Akses cepat ke berbagai layanan digital E-Buddy.'],
+ ['E-Buddy','Sistem informasi kepegawaian Kabupaten Sidoarjo untuk pengelolaan data ASN Sidoarjo.'],
+ ['MyASN','Portal layanan ASN Digital dari BKN untuk akses informasi kepegawaian nasional.'],
+ ['BKN','Layanan resmi Badan Kepegawaian Negara.'],
+ ['Smart ASN','Sistem cerdas untuk pengelolaan ASN di lingkungan Pemerintah Kabupaten Sidoarjo.'],
+ ['SIMPKB','Sistem Informasi Manajemen Pengembangan Keprofesian Berkelanjutan untuk GTK Kemendikdasmen.'],
+ ['Info GTK','Portal informasi resmi Guru dan Tenaga Kependidikan dari Kemendikdasmen.'],
+ ['Ruang GTK','Platform pengembangan profesi dan komunitas untuk Guru dan Tenaga Kependidikan.'],
+ ['KTA PGRI','Kartu Tanda Anggota Digital PGRI untuk verifikasi keanggotaan organisasi guru.'],
+ ['TAPERA','Tabungan Perumahan Rakyat – program tabungan untuk pembiayaan rumah bagi ASN dan pensiunan.'],
+ ['SIPEKAT','Sistem Pelaporan Ketenagakerjaan untuk pengelolaan data ketenagakerjaan Kabupaten Sidoarjo.']
+];
+document.getElementById('asn').innerHTML=asn.map(x=>`<div class="card service"><h3>${x[0]}</h3><p>${x[1]}</p><a href="#" onclick="return false">Akses layanan →</a></div>`).join('');
+
+const staff=[
+['Mei Ernawati, S.Pd., M.Pd','Kepala Sekolah'],['Ratna Dewi Ramayanti., S.Pd','Guru Kelas 1A'],
+['Sumarlik, S.Pd','Guru Kelas 1B'],['Hena Dia Ayu Amaliyah., S.Pd','Guru Kelas 2A'],
+['Eny Suprihatin, S.Pd','Guru Kelas 2B'],['Arifin Rahmad, S.Pd','Guru Kelas 3A'],
+['Ulil Nur Qomariyah., S.Pd','Guru Kelas 3B'],['Ika Aristianti, S.Pd','Guru Kelas 4A'],
+["M. Masy'aril Kirom., S.Pd",'Guru Kelas 4B'],['Diana Eka Dea Prihastiwi., S.Pd','Guru Kelas 5A'],
+['Eko Fatmawati, S.Pd','Guru Kelas 5B'],['Muhammad Handoyo, S.Pd., M.Pd','Guru Kelas 6A'],
+['Felina Devi Cacilia, S.Pd','Guru Kelas 6B'],['Moch. Choirul Mahdi, S.Pd.I','Guru PAI Kelas 1-3'],
+["Nafi'a Wilda Zarkasi, S.Pd",'Guru PAI Kelas 4-6'],['Nmarcelina','Guru PAK Kelas 1-6'],
+['Yogi Dwi Hariyanto, S.Pd','Guru PJOK Kelas 4-6'],['Richa Putri Agustina, S.Pd','Guru PJOK Kelas 1-3'],
+['Iin Indrawati, S.Pd','Guru TIK Kelas 1-6'],['Romzul Wahtonik, S.E.','Administrasi Sekolah'],
+['Samsul Arif','Petugas Kebersihan'],['Yadi Mustofa','Penjaga Keamanan']
+];
+document.getElementById('staff').innerHTML=staff.map((x,i)=>`<div class="card staff"><div class="avatar">${i+1}</div><div><h3>${x[0]}</h3><p>${x[1]}</p></div></div>`).join('');
+
+const newsTitles=[
+'Kegiatan LT 1 Pramuka SDN Kebonagung 1 Sukodono',
+'Gladian Pemimpin Regu (Dianpinru) Gerakan Pramuka',
+'Peringatan Hari Pramuka di SDN Kebonagung 1',
+'Kebon1Cup Class Meeting SDN Kebonagung 1',
+'Prestasi Kabaddi SDN Kebonagung 1',
+'Kegiatan OSN-K 2026',
+'Peringatan Tahun Baru Islam 1448 H',
+'Kegiatan Idul Adha 1448 H',
+'Jumat Sehat di Lingkungan Sekolah',
+'Istigosah dan Pembiasaan Keagamaan',
+'Sholat Dhuha dan Pembacaan Juz Amma',
+'Kegiatan Ekstrakurikuler Pramuka',
+'Kegiatan Olahraga dan Kebugaran Siswa',
+'Program Sekolah Berwawasan Lingkungan',
+'Prestasi dan Kegiatan Peserta Didik'
+];
+document.getElementById('news').innerHTML=newsTitles.map((x,i)=>`<article class="card news-card"><span class="badge">BERITA ${String(i+1).padStart(2,'0')}</span><h3>${x}</h3><p>Informasi kegiatan dan kabar terbaru SDN Kebonagung 1 Sukodono. Klik untuk melihat berita selengkapnya.</p></article>`).join('');
+
+const extras=['Pramuka','Kabaddi','Seni & Tari','Keagamaan','Olahraga'];
+document.getElementById('extras').innerHTML=extras.map((x,i)=>`<div class="card extra"><span class="badge">EKSTRA ${i+1}</span><h2>${x}</h2><p>Wadah pengembangan bakat, minat, karakter, keterampilan, dan prestasi peserta didik.</p></div>`).join('');
+
+document.getElementById('gallery').innerHTML=Array.from({length:8},(_,i)=>`<div class="gallery">📷 GALERI KEGIATAN ${i+1}</div>`).join('');
+
+const services=[
+['Legalisir SPMB','Informasi dan persyaratan layanan legalisir dokumen untuk keperluan SPMB.'],
+['Legalisir Ijazah','Informasi layanan legalisir ijazah dan dokumen hasil belajar.'],
+['SOP Sekolah','Kumpulan informasi Standar Operasional Prosedur pelayanan sekolah.'],
+['Surat Keterangan','Informasi pengajuan surat keterangan dan administrasi sekolah.'],
+['Informasi SPMB','Informasi penerimaan murid baru dan dokumen yang diperlukan.'],
+['Administrasi Sekolah','Panduan layanan administrasi bagi peserta didik dan orang tua.'],
+['Kontak Sekolah','Saluran komunikasi resmi sekolah untuk kebutuhan informasi.'],
+['Formulir Layanan','Tempat menuju formulir digital layanan sekolah.']
+];
+document.getElementById('services').innerHTML=services.map(x=>`<div class="card service"><h3>${x[0]}</h3><p>${x[1]}</p><a href="#" onclick="return false">Lihat informasi →</a></div>`).join('');
+</script>
+</body>
+</html>
